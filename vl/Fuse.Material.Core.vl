@@ -1,8 +1,110 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="PKvZHPiRxnSMYGPTlnXAom" Summary="Input to the gpu world" LanguageVersion="2021.3.1.89" Version="0.128">
-  <NugetDependency Id="BguWkaXEMADMOCpL1jti9a" Location="VL.CoreLib" Version="2021.3.1" />
+<Document xmlns:p="property" Id="PKvZHPiRxnSMYGPTlnXAom" Summary="Input to the gpu world" LanguageVersion="2021.4.0.12" Version="0.128">
+  <NugetDependency Id="BguWkaXEMADMOCpL1jti9a" Location="VL.CoreLib" Version="2021.4.0-0012-g1390768a00" />
   <Patch Id="ALpqjXEf369Pnuk64gmWrV">
-    <Canvas Id="V8HBoVZNCZmPvIQ0NbkFQ5" DefaultCategory="Fuse.Particles.Core" CanvasType="FullCategory" />
+    <Canvas Id="V8HBoVZNCZmPvIQ0NbkFQ5" DefaultCategory="Fuse.Material.Core" CanvasType="FullCategory">
+      <!--
+
+    ************************ ColorMaterial ************************
+
+-->
+      <Node Name="ColorMaterial" Bounds="599,356" Id="OOy5d5emCcoOGVNA7UKhin">
+        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
+          <Choice Kind="ContainerDefinition" Name="Process" />
+        </p:NodeReference>
+        <Patch Id="Iu7r5Gj1KrqNNC78YZb2mi">
+          <Canvas Id="SIvxkDnOJQkNLZEHEUVfUt" CanvasType="Group">
+            <ControlPoint Id="MHYXlksSPS9N1PWeauOePf" Bounds="413,674" />
+            <Node Bounds="432,519,253,19" Id="OM9z8xEklVWNPzW0xUDVrl">
+              <p:NodeReference LastCategoryFullName="Stride.Materials" LastSymbolSource="VL.Stride.Rendering.Nodes">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessNode" Name="ShadingAttributes" />
+              </p:NodeReference>
+              <Pin Id="OM71vMgwBtWPQ2MDsAPhR7" Name="Diffuse" Kind="InputPin" />
+              <Pin Id="L2pMAP6EbVeNtFr0c8XuaO" Name="Diffuse Model" Kind="InputPin" />
+              <Pin Id="EhxojxDxj7qMZHWlvaG3W5" Name="Specular" Kind="InputPin" />
+              <Pin Id="TJxD8O5tiLnMzjBXO3a9sM" Name="Specular Model" Kind="InputPin" />
+              <Pin Id="DPfPGWJpiyiLwhSi1ntRb3" Name="Emissive" Kind="InputPin" />
+              <Pin Id="PJCyAJxmKOBPTCDSYO6SJg" Name="Subsurface Scattering" Kind="InputPin" />
+              <Pin Id="CEKdAZ8rh51PwRLHcWSq4w" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="745,525,85,19" Id="AX3Ih8NWWAMQHgIjajz6Io">
+              <p:NodeReference LastCategoryFullName="Stride.Materials" LastSymbolSource="VL.Stride.Rendering.Nodes">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessNode" Name="MiscAttributes" />
+              </p:NodeReference>
+              <Pin Id="TukBYyRnGAROFU8lZNDn3W" Name="Occlusion" Kind="InputPin" />
+              <Pin Id="VIxawEEbOuEQY4CJuMyDJe" Name="Transparency" Kind="InputPin" />
+              <Pin Id="IJYOUZrXTIsPcopAMfqlE3" Name="Overrides" Kind="InputPin" />
+              <Pin Id="BIvDbCcSsm6PB2Rb8TnR1O" Name="Cull Mode" Kind="InputPin" />
+              <Pin Id="RLpiZukyZHBPav1nYyGEDs" Name="Clear Coat" Kind="InputPin" />
+              <Pin Id="KygP3vtYmJOLIlWMW8qM3i" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="VUti7LKQrIzOBBqYKjfkUu" Bounds="807,470" />
+            <ControlPoint Id="CQGwfHol1NRPrqbYLjhorl" Bounds="767,443" />
+            <Node Bounds="411,603,65,19" Id="Q1472DOM1u2LIawG23V1UZ">
+              <p:NodeReference LastCategoryFullName="Stride.Materials" LastSymbolSource="VL.Stride.Rendering.Nodes">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessNode" Name="Material" />
+              </p:NodeReference>
+              <Pin Id="D9LZRsmBbFQMVdKxf7kJbw" Name="Geometry" Kind="InputPin" />
+              <Pin Id="H7OCcG4S8I5NGj4vrOUUi1" Name="Shading" Kind="InputPin" />
+              <Pin Id="TFmt8yWfACqOBIAoUFUrdP" Name="Misc" Kind="InputPin" />
+              <Pin Id="MPsUDHmdxAwPkogJfI27Xq" Name="Layers" Kind="InputPin" />
+              <Pin Id="BW0FtPDrnMPL8DOVxNd7xz" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="627,447,65,19" Id="PPbgTOgqISVOH5vmnKJZgE">
+              <p:NodeReference LastCategoryFullName="Stride.Materials.ShadingAttributes" LastSymbolSource="VL.Stride.Rendering.Nodes">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessNode" Name="Emissive" />
+              </p:NodeReference>
+              <Pin Id="SCBgn5rsxbDMQVZkr1I1cS" Name="Emissive Map" Kind="InputPin" />
+              <Pin Id="OEZ93L3QCvSOGfR2Bf17LR" Name="Intensity" Kind="InputPin" />
+              <Pin Id="N0fl8YQKLgnNMyyixQewBE" Name="Use Alpha" Kind="InputPin" />
+              <Pin Id="L7oaqD0TB7vMXSY8IW3p3t" Name="Enabled" Kind="InputPin" />
+              <Pin Id="Er96cFCc3gKN3hn2H0sulb" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Pad Id="NH7scGtyfuhNGfyFHqmkz9" Comment="Use Alpha" Bounds="724,338,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pad>
+            <ControlPoint Id="JKlHUmWf4qXNHS6YF80coX" Bounds="601,344" />
+          </Canvas>
+          <Patch Id="GFK4X6l3MlMLaoX5p68nBh" Name="Create" ParticipatingElements="P8qu2gf8BbkOWI2MCwV4Zq,JgjvN5aqOI0LM3kOPE9Pu9" />
+          <Patch Id="USmhiwcVERIM4q61yM4LDD" Name="Update" ParticipatingElements="LNYF9cUGQC7Nfn0LbFmDI0,UbXvfoFm1Y9NykLk3bdl0h">
+            <Pin Id="QqVbtleFZZDPd833l8Wy2j" Name="Output" Kind="OutputPin" Bounds="444,557" />
+            <Pin Id="QmPzXxN9BFNP0rmjn3ta6m" Name="Emissive Map" Kind="InputPin" />
+          </Patch>
+          <Link Id="G72Fl4Z05PSQV1vViEzpxW" Ids="MHYXlksSPS9N1PWeauOePf,QqVbtleFZZDPd833l8Wy2j" IsHidden="true" />
+          <Patch Id="H0Mvblz2IUzNt7STwxdTbu" Name="SetCullMode">
+            <Pin Id="Hljsql9hVR1MJMetaEhGqm" MergeId="594767" Name="Cull Mode" Kind="InputPin" />
+          </Patch>
+          <Link Id="NUjebeqrL03NUUC9yQJODJ" Ids="VUti7LKQrIzOBBqYKjfkUu,BIvDbCcSsm6PB2Rb8TnR1O" />
+          <Link Id="TKAbTW5qmtILDlp7MGiF4i" Ids="Hljsql9hVR1MJMetaEhGqm,VUti7LKQrIzOBBqYKjfkUu" IsHidden="true" />
+          <Patch Id="D4xWvgH4x2COokDrLb4hzZ" Name="SetTransparency">
+            <Pin Id="PygzStti3JYP5sCWvScW2r" MergeId="205327" Name="Transparency" Kind="InputPin" />
+          </Patch>
+          <Link Id="DgBRgbyf4hkLg0opIRBpE3" Ids="PygzStti3JYP5sCWvScW2r,CQGwfHol1NRPrqbYLjhorl" IsHidden="true" />
+          <Link Id="JYF3kLDd154O3YVQvE9TbG" Ids="CQGwfHol1NRPrqbYLjhorl,VIxawEEbOuEQY4CJuMyDJe" />
+          <Link Id="LNYF9cUGQC7Nfn0LbFmDI0" Ids="CEKdAZ8rh51PwRLHcWSq4w,H7OCcG4S8I5NGj4vrOUUi1" />
+          <Link Id="UbXvfoFm1Y9NykLk3bdl0h" Ids="KygP3vtYmJOLIlWMW8qM3i,TFmt8yWfACqOBIAoUFUrdP" />
+          <Link Id="JVhPHhnKPPwMstRwjx5niL" Ids="BW0FtPDrnMPL8DOVxNd7xz,MHYXlksSPS9N1PWeauOePf" />
+          <Link Id="P8qu2gf8BbkOWI2MCwV4Zq" Ids="Er96cFCc3gKN3hn2H0sulb,DPfPGWJpiyiLwhSi1ntRb3" />
+          <Link Id="JgjvN5aqOI0LM3kOPE9Pu9" Ids="NH7scGtyfuhNGfyFHqmkz9,N0fl8YQKLgnNMyyixQewBE" />
+          <Patch Id="B1SRQFb9YVoMNDygposyOd" Name="SetColor" />
+          <ProcessDefinition Id="KEuzpTagrOxLUjThWyhIk9">
+            <Fragment Id="EAyBSKqIp8COhHIOiQYtOg" Patch="GFK4X6l3MlMLaoX5p68nBh" Enabled="true" />
+            <Fragment Id="EyBnzgbJVulM5OFhxKVcfz" Patch="B1SRQFb9YVoMNDygposyOd" Enabled="true" />
+            <Fragment Id="I9LlAdtyuSSPG3MWDK8ekg" Patch="D4xWvgH4x2COokDrLb4hzZ" Enabled="true" />
+            <Fragment Id="CJ7h7VZsWRBMM1IcVaQ8UC" Patch="H0Mvblz2IUzNt7STwxdTbu" Enabled="true" />
+            <Fragment Id="QMk8qgh1GiPPFuQpFa0UDY" Patch="USmhiwcVERIM4q61yM4LDD" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="O7F2p0jQDDRQWPRPzKmNtw" Ids="JKlHUmWf4qXNHS6YF80coX,SCBgn5rsxbDMQVZkr1I1cS" />
+          <Link Id="OXDF7wvM1TJL0mWVoPUH2K" Ids="QmPzXxN9BFNP0rmjn3ta6m,JKlHUmWf4qXNHS6YF80coX" IsHidden="true" />
+        </Patch>
+      </Node>
+    </Canvas>
     <!--
 
     ************************ Application ************************
@@ -24,6 +126,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="MHdJL4N0OXVNS4EVs2Aloa" Location="VL.HDE" Version="2021.3.1" />
+  <NugetDependency Id="MHdJL4N0OXVNS4EVs2Aloa" Location="VL.HDE" Version="2021.4.0-0012-g1390768a00" />
   <NugetDependency Id="Hcv3WxcV4F6LHOf1rxCri1" Location="Fuse" IsForward="true" Version="0.0.0.0" />
+  <NugetDependency Id="FPEMUTMMSUrPDrIqT2avOt" Location="VL.Stride" Version="0.9.91-gdded74ffda" />
 </Document>
