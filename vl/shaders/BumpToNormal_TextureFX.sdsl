@@ -1,4 +1,4 @@
-shader HeightToNormal_TextureFX : TextureFX
+shader BumpToNormal_TextureFX : TextureFX
 {
 	float2 R;
 	float Radius = 1.0;
