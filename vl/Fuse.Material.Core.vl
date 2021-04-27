@@ -542,7 +542,7 @@
             <Pin Id="HXT95tMPB1DMN9bV5ZTS86" MergeId="152118" Name="Subsurface Scattering" Kind="InputPin" Visibility="Optional" />
           </Patch>
           <Patch Id="EeDZ8e93ZMmOAu0zTMS5R5" Name="SetTransparency">
-            <Pin Id="UPDKEGJ5pnkMMdLFsbNdNl" MergeId="152131" Name="Transparency" Kind="InputPin" Visibility="Optional" />
+            <Pin Id="UPDKEGJ5pnkMMdLFsbNdNl" MergeId="152131" Name="Transparency" Kind="InputPin" />
           </Patch>
           <Patch Id="DC407YjXAtkQRKWPgw10Bp" Name="SetEmissive">
             <Pin Id="EGGwAqpKqfdLWqTOCkwG63" MergeId="152111" Name="Emissive" Kind="InputPin" />
@@ -551,7 +551,7 @@
             <Pin Id="QZr1tpg6YEiNftMrL0aBYO" MergeId="152137" Name="Layers" Kind="InputPin" />
           </Patch>
           <Patch Id="HNOVNyK4hefLEq1U4r3GKg" Name="SetNormal">
-            <Pin Id="IE270NjvVeZMtll80KDQzp" MergeId="152199" Name="Normal" Kind="InputPin" Visibility="Hidden" />
+            <Pin Id="IE270NjvVeZMtll80KDQzp" MergeId="152199" Name="Normal" Kind="InputPin" />
           </Patch>
           <Patch Id="UQ15LQJ2wFsOC7myDkBohh" Name="SetTesselation">
             <Pin Id="JZjO6fQ2wCeNhOARk6gufS" MergeId="152223" Name="Tessellation" Kind="InputPin" Visibility="Hidden" />
@@ -794,6 +794,7 @@
             <ControlPoint Id="AQm0JlMTdY8Lm7NgOOpKjS" Bounds="892,367" />
             <ControlPoint Id="NgNXxh9JordNY5Rsp64axJ" Bounds="1326,368" />
             <ControlPoint Id="H5FAbWMHhmCLzk2OOo0Ypa" Bounds="1066,767" />
+            <ControlPoint Id="CkM2CNwUcOwOjhiGTjjiB5" Bounds="1266,681" />
           </Canvas>
           <Patch Id="EOahbvmODIDPe7TOyIbaMF" Name="Create" />
           <Patch Id="JWmvI17hppvPwu7iFImGNZ" Name="Update" ParticipatingElements="PPIJ9KtNk47Mnwz4e0CSUY,PU0l0qWL9EVO0anpZHPfhN">
@@ -802,8 +803,8 @@
             <Pin Id="IVdNW4th4O7MGtMUP47dM2" Name="Blend" Kind="InputPin" />
             <Pin Id="ApoIxR4TvvgPoxDsqW3upp" Name="Blend Defualt" Kind="InputPin" />
             <Pin Id="Vndtt3vXBhyOq6WEV5pB6A" Name="Material" Kind="InputPin" />
+            <Pin Id="Q9GsoDPjVSfQMOAeA2mBt5" Name="Shader Code" Kind="OutputPin" Bounds="1266,682" />
           </Patch>
-          <Patch Id="M8QZtLqUgm1M81J6ynKu33" Name="SetBlend" />
           <Link Id="BLX0EaBGUu5P5gSQXCkGeP" Ids="EFY4V7zhYcZNfWhQ3Z2S0e,AUK1Vs7j8CLLekOlK8P8am" />
           <Link Id="FqYrhFTn3V4Nyq3G2PkT8i" Ids="O0X22g3wZm4MPeyebsBpTz,EkSmHP3fkaMPINSbdE2ANr" />
           <Link Id="AWk1L8YzFfEN6Afjl96eHO" Ids="O0X22g3wZm4MPeyebsBpTz,Q4XLQ336BQjNu7glZKntjD" />
@@ -820,13 +821,12 @@
           <Link Id="DlX1hWCNjQcL8HiPa0nwyT" Ids="B3tvSjRVvjQQM3el9ixNX6,NgNXxh9JordNY5Rsp64axJ" IsHidden="true" />
           <Link Id="Qq1sICO92sMOjJNUU7d4Tn" Ids="AalBe2dRbR5OE9gfipVw2F,H5FAbWMHhmCLzk2OOo0Ypa" />
           <Link Id="Og8RhSmI3oiPRVOtAgjLFm" Ids="H5FAbWMHhmCLzk2OOo0Ypa,FR7YazL2029NbbSnLzuT4P" IsHidden="true" />
-          <Patch Id="Lrk99NmHZfZOXeThCLAEqp" Name="SetMaterial" />
           <ProcessDefinition Id="UElJPcSMeeNMZfe25uFZ1a">
             <Fragment Id="KzlMTzCQxa9LEdBMWShn0y" Patch="EOahbvmODIDPe7TOyIbaMF" Enabled="true" />
-            <Fragment Id="IdEN52oLnKZNmNIGjJkOF3" Patch="Lrk99NmHZfZOXeThCLAEqp" Enabled="true" />
-            <Fragment Id="JsRCwuG5wCtQD65cAbGZGb" Patch="M8QZtLqUgm1M81J6ynKu33" Enabled="true" />
             <Fragment Id="FBCbBLjFDwxPmBs569lsSM" Patch="JWmvI17hppvPwu7iFImGNZ" Enabled="true" />
           </ProcessDefinition>
+          <Link Id="CzSHmqxbzKVMKccjypi3PJ" Ids="P3aEXgMfoddNQ4ckgvaTUK,CkM2CNwUcOwOjhiGTjjiB5" />
+          <Link Id="U3qfjZi46xJMn0BF3xmcPA" Ids="CkM2CNwUcOwOjhiGTjjiB5,Q9GsoDPjVSfQMOAeA2mBt5" IsHidden="true" />
         </Patch>
       </Node>
     </Canvas>
